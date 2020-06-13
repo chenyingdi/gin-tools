@@ -1,4 +1,4 @@
-module gin-tools
+module github.com/chenyingdi/gin-tools
 
 go 1.14
 
