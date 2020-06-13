@@ -13,17 +13,17 @@ func NewRestful(group *gin.RouterGroup) *Restful {
 func (r *Restful) REST(funcMap map[string]gin.HandlerFunc) {
 	for k, v := range funcMap {
 		switch k {
-		case "GET":
+		case "GET", "Get", "get":
 			r.group.GET("", v)
-		case "POST":
+		case "POST", "Post", "post":
 			r.group.POST("", v)
-		case "PUT":
+		case "PUT", "Put", "put":
 			r.group.PUT("", v)
-		case "DELETE":
+		case "DELETE", "Delete", "delete":
 			r.group.DELETE("", v)
-		case "OPTIONS":
+		case "OPTIONS", "Options", "options":
 			r.group.OPTIONS("", v)
-		case "PATCH":
+		case "PATCH", "Patch", "patch":
 			r.group.PATCH("", v)
 		}
 	}
