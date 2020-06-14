@@ -29,7 +29,7 @@ func (j *JsonResp) Success(data interface{}) {
 }
 
 func (j *JsonResp) ServerError(data interface{}) {
-	j.JSONP(http.StatusOK, "数据错误！", data)
+	j.JSONP(http.StatusInternalServerError, "数据错误！", data)
 }
 
 func (j *JsonResp) BadRequest(data interface{}) {
